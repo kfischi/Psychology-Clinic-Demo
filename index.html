@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ד"ר נועה רוזן - פסיכולוגיה קלינית</title>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,103 +12,68 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --primary-color: #667eea;
-            --secondary-color: #764ba2;
-            --accent-color: #a8d8ea;
-            --text-dark: #2c3e50;
-            --text-light: #7f8c8d;
-            --bg-light: #f8f9fa;
-            --white: #ffffff;
-            --soft-blue: #e3f2fd;
-            --warm-beige: #faf7f2;
-        }
-
         body {
             font-family: 'Heebo', sans-serif;
             line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--white);
-            direction: rtl;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
         }
 
-        /* Navigation */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        .nav-container {
+        .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 1rem 2rem;
         }
 
         .logo {
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--primary-color);
+            color: #4a90e2;
         }
 
-        .nav-menu {
+        .nav-links {
             display: flex;
             list-style: none;
             gap: 2rem;
         }
 
-        .nav-menu a {
+        .nav-links a {
             text-decoration: none;
-            color: var(--text-dark);
+            color: #333;
             font-weight: 500;
             transition: color 0.3s ease;
-            position: relative;
         }
 
-        .nav-menu a:hover {
-            color: var(--primary-color);
-        }
-
-        .nav-menu a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary-color);
-            transition: width 0.3s ease;
-        }
-
-        .nav-menu a:hover::after {
-            width: 100%;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--text-dark);
-            cursor: pointer;
+        .nav-links a:hover {
+            color: #4a90e2;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--soft-blue) 0%, var(--warm-beige) 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 8rem 0 4rem;
+            padding: 120px 0 80px;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
             position: relative;
             overflow: hidden;
         }
@@ -121,209 +85,118 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23667eea" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-            opacity: 0.3;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23fff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23fff" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="200" r="100" fill="url(%23a)"><animate attributeName="cy" values="200;800;200" dur="8s" repeatCount="indefinite"/></circle><circle cx="800" cy="300" r="80" fill="url(%23a)"><animate attributeName="cx" values="800;200;800" dur="10s" repeatCount="indefinite"/></circle></svg>');
+            animation: float 20s infinite linear;
         }
 
-        .hero-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero .description {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            opacity: 0.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .about-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 2fr;
             gap: 4rem;
             align-items: center;
-            position: relative;
-            z-index: 2;
         }
 
-        .hero-content {
-            animation: slideInRight 1s ease-out;
-        }
-
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-
-        .hero-subtitle {
-            font-size: 1.3rem;
-            color: var(--text-light);
-            margin-bottom: 2rem;
-            line-height: 1.5;
-        }
-
-        .hero-description {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            margin-bottom: 3rem;
-            line-height: 1.7;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-family: 'Heebo', sans-serif;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        .profile-card {
+            background: linear-gradient(135deg, #4a90e2 0%, #5ba3f5 100%);
             color: white;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--primary-color);
-            border: 2px solid var(--primary-color);
-        }
-
-        .btn-secondary:hover {
-            background: var(--primary-color);
-            color: white;
-        }
-
-        .hero-image {
-            position: relative;
-            animation: slideInLeft 1s ease-out;
-        }
-
-        .doctor-card {
-            background: white;
-            border-radius: 20px;
             padding: 2rem;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-radius: 20px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(74, 144, 226, 0.3);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: transform 0.3s ease;
         }
 
-        .doctor-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        .profile-card:hover {
+            transform: perspective(1000px) rotateY(0deg);
         }
 
-        .doctor-photo {
-            width: 150px;
-            height: 150px;
+        .profile-image {
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
-            margin: 0 auto 1.5rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            margin: 0 auto 1rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 4rem;
-            color: white;
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+            font-size: 3rem;
+            border: 4px solid rgba(255,255,255,0.3);
         }
 
-        .doctor-name {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .doctor-title {
-            color: var(--primary-color);
-            font-weight: 600;
+        .about-text h2 {
+            font-size: 2.5rem;
             margin-bottom: 1rem;
+            color: #333;
         }
 
-        .credentials {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
+        .about-text p {
+            font-size: 1.1rem;
             margin-bottom: 1.5rem;
-        }
-
-        .credential-item {
-            background: var(--bg-light);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            color: var(--text-light);
-        }
-
-        .quick-contact {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 1rem;
-            border-radius: 15px;
-            margin-top: 1rem;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.9rem;
+            color: #666;
         }
 
         /* Services Section */
         .services {
-            padding: 6rem 0;
-            background: var(--white);
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .section-header {
+        .services h2 {
             text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-title {
             font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-        }
-
-        .section-subtitle {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            max-width: 600px;
-            margin: 0 auto;
+            margin-bottom: 3rem;
+            color: white;
         }
 
         .services-grid {
@@ -334,168 +207,52 @@
 
         .service-card {
             background: white;
-            border-radius: 15px;
             padding: 2rem;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            border: 1px solid #f0f0f0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            transform: scaleX(0);
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
         }
 
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-
         .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            transform: translateY(-10px);
         }
 
         .service-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-            color: white;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #4a90e2;
         }
 
-        .service-title {
+        .service-card h3 {
             font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--text-dark);
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .service-card p {
+            color: #666;
             margin-bottom: 1rem;
         }
 
-        .service-description {
-            color: var(--text-light);
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-features {
-            list-style: none;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-features li {
-            padding: 0.3rem 0;
-            color: var(--text-light);
-            position: relative;
-            padding-right: 1.5rem;
-        }
-
-        .service-features li::before {
-            content: '✓';
-            position: absolute;
-            right: 0;
-            color: var(--primary-color);
-            font-weight: bold;
-        }
-
-        /* About Section */
-        .about {
-            padding: 6rem 0;
-            background: var(--bg-light);
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-image {
-            position: relative;
-        }
-
-        .about-photo {
-            width: 100%;
-            max-width: 400px;
-            height: 500px;
-            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 6rem;
-            color: white;
-            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.2);
-        }
-
-        .experience-badge {
-            position: absolute;
-            top: -20px;
-            left: -20px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 1rem;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
-        }
-
-        .years-number {
-            font-size: 2rem;
-            font-weight: 700;
-            display: block;
-        }
-
-        .about-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-light);
-            margin-bottom: 2rem;
-        }
-
-        .qualifications {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .qualification-item {
-            background: white;
-            padding: 1rem;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
-        }
-
-        .qualification-icon {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .qualification-text {
-            font-size: 0.9rem;
-            color: var(--text-light);
+        .price {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ff6b6b;
+            margin-bottom: 1rem;
         }
 
         /* Contact Section */
         .contact {
-            padding: 6rem 0;
-            background: var(--white);
+            padding: 80px 0;
+            background: white;
+        }
+
+        .contact h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
         }
 
         .contact-content {
@@ -505,347 +262,408 @@
         }
 
         .contact-form {
-            background: white;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 2rem;
             border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            color: white;
         }
 
         .form-group {
             margin-bottom: 1.5rem;
         }
 
-        .form-label {
+        .form-group label {
             display: block;
             margin-bottom: 0.5rem;
-            color: var(--text-dark);
-            font-weight: 500;
+            font-weight: 600;
         }
 
-        .form-input {
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
             width: 100%;
-            padding: 1rem;
-            border: 2px solid #e9ecef;
+            padding: 12px;
+            border: none;
             border-radius: 10px;
             font-size: 1rem;
-            transition: border-color 0.3s ease;
-            font-family: 'Heebo', sans-serif;
+            background: rgba(255,255,255,0.9);
         }
 
-        .form-input:focus {
-            outline: none;
-            border-color: var(--primary-color);
-        }
-
-        .form-textarea {
+        .form-group textarea {
+            height: 120px;
             resize: vertical;
-            min-height: 120px;
         }
 
-        .contact-info-section {
+        .submit-btn {
+            background: #ff6b6b;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+        }
+
+        .contact-info {
             display: flex;
             flex-direction: column;
             gap: 2rem;
         }
 
         .info-card {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
+            background: linear-gradient(135deg, #4a90e2 0%, #5ba3f5 100%);
             padding: 2rem;
-            border-radius: 20px;
+            border-radius: 15px;
+            color: white;
             text-align: center;
         }
 
         .info-icon {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
         }
 
-        .info-title {
-            font-size: 1.3rem;
+        .whatsapp-btn {
+            display: inline-block;
+            background: #25d366;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            border-radius: 50px;
             font-weight: 600;
-            margin-bottom: 1rem;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
         }
 
-        .info-text {
-            font-size: 1rem;
-            opacity: 0.9;
+        .whatsapp-btn:hover {
+            background: #128c7e;
+            transform: scale(1.05);
         }
 
-        /* Floating Elements */
-        .floating-element {
-            position: absolute;
-            opacity: 0.1;
-            animation: float 6s ease-in-out infinite;
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
         }
 
-        .floating-element:nth-child(1) {
-            top: 20%;
-            left: 10%;
-            animation-delay: 0s;
-        }
-
-        .floating-element:nth-child(2) {
-            top: 60%;
-            right: 10%;
-            animation-delay: 2s;
-        }
-
-        .floating-element:nth-child(3) {
-            bottom: 20%;
-            left: 15%;
-            animation-delay: 4s;
-        }
-
-        /* Animations */
-        @keyframes slideInRight {
-            from {
-                transform: translateX(-50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideInLeft {
-            from {
-                transform: translateX(50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                transform: translateY(30px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .nav-menu {
-                display: none;
-            }
-
-            .hero-container {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 3rem;
-            }
-
-            .hero-title {
+            .hero h1 {
                 font-size: 2.5rem;
             }
 
-            .about-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
+            .about-content,
             .contact-content {
                 grid-template-columns: 1fr;
+                gap: 2rem;
             }
 
-            .qualifications {
+            .nav-links {
+                display: none;
+            }
+
+            .services-grid {
                 grid-template-columns: 1fr;
             }
         }
 
-        /* Scroll Animation */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
+        /* Animations */
+        .fade-in {
+            animation: fadeIn 1s ease-in;
         }
 
-        .animate-on-scroll.animated {
-            opacity: 1;
-            transform: translateY(0);
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .slide-in-right {
+            animation: slideInRight 1s ease-out;
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <i class="fas fa-brain"></i> ד"ר נועה רוזן
-            </div>
-            <ul class="nav-menu">
+    <header>
+        <nav>
+            <div class="logo">ד"ר נועה רוזן</div>
+            <ul class="nav-links">
                 <li><a href="#home">בית</a></li>
-                <li><a href="#services">שירותים</a></li>
                 <li><a href="#about">אודות</a></li>
-                <li><a href="#contact">צור קשר</a></li>
+                <li><a href="#services">שירותים</a></li>
+                <li><a href="#contact">יצירת קשר</a></li>
             </ul>
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <!-- Floating Elements -->
-        <div class="floating-element">
-            <i class="fas fa-heart" style="font-size: 4rem; color: var(--primary-color);"></i>
-        </div>
-        <div class="floating-element">
-            <i class="fas fa-brain" style="font-size: 3rem; color: var(--accent-color);"></i>
-        </div>
-        <div class="floating-element">
-            <i class="fas fa-leaf" style="font-size: 3.5rem; color: var(--secondary-color);"></i>
-        </div>
-
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">מרחב בטוח לשינוי ולצמיחה</h1>
-                <p class="hero-subtitle">פסיכולוגיה קלינית מתקדמת עם גישה אישית וחמה</p>
-                <p class="hero-description">
-                    כפסיכולוגית קלינית מנוסה, אני מציעה טיפול מקצועי ואמפתי בסביבה תומכת ובטוחה. 
-                    המטרה שלי היא לעזור לך להתמודד עם אתגרי החיים ולמצוא את הכוח הפנימי שלך.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">
-                        <i class="fas fa-calendar-check"></i>
-                        קבעי פגישה
-                    </a>
-                    <a href="#services" class="btn btn-secondary">
-                        <i class="fas fa-info-circle"></i>
-                        למדי עוד
-                    </a>
-                </div>
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h1 class="fade-in">ד"ר נועה רוזן</h1>
+                <p class="subtitle fade-in">פסיכולוגיה קלינית מקצועית ואמפתית</p>
+                <p class="description fade-in">מומחית בטיפול פסיכולוגי עם ניסיון של 15+ שנה בליווי אנשים לחיים טובים יותר. גישה חמה, מקצועית ומותאמת אישית לכל מטופל.</p>
+                <a href="#contact" class="cta-button fade-in">קביעת פגישת היכרות חינם</a>
             </div>
+        </section>
 
-            <div class="hero-image">
-                <div class="doctor-card">
-                    <div class="doctor-photo">
-                        <i class="fas fa-user-md"></i>
-                    </div>
-                    <h3 class="doctor-name">ד"ר נועה רוזן</h3>
-                    <p class="doctor-title">פסיכולוגית קלינית מומחית</p>
-                    
-                    <div class="credentials">
-                        <div class="credential-item">רישיון פסיכולוג קליני</div>
-                        <div class="credential-item">התמחות בטיפול פסיכודינמי</div>
-                        <div class="credential-item">מתמחה בטיפול זוגי ומשפחתי</div>
-                    </div>
-
-                    <div class="quick-contact">
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                <span>052-123-4567</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <span>נענה תוך 24 שעות</span>
-                            </div>
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="profile-card slide-in-right">
+                        <div class="profile-image">👩‍⚕️</div>
+                        <h3>ד"ר נועה רוזן</h3>
+                        <p>פסיכולוגית קלינית מורשית</p>
+                        <div style="margin-top: 1rem;">
+                            <div style="margin-bottom: 0.5rem;"><strong>15+</strong> שנות ניסיון</div>
+                            <div style="margin-bottom: 0.5rem;"><strong>500+</strong> מטופלים</div>
+                            <div><strong>רישוי</strong> משרד הבריאות</div>
                         </div>
-                        <button class="btn btn-secondary" style="width: 100%; color: white; border-color: white;" onclick="contactWhatsApp()">
-                            <i class="fab fa-whatsapp"></i>
-                            צרי קשר עכשיו
-                        </button>
+                    </div>
+                    <div class="about-text fade-in">
+                        <h2>על המטפלת</h2>
+                        <p>ד"ר נועה רוזן היא פסיכולוגית קלינית מורשית עם ניסיון נרחב בטיפול פסיכולוגי. השלימה דוקטורט בפסיכולוגיה קלינית באונiversיטת תל אביב והתמחתה בטיפול בחרדות, דיכאון וטראומות.</p>
+                        <p>הגישה הטיפולית שלה משלבת שיטות מובלות במחקר כמו CBT, DBT ו-EMDR, תוך התאמה אישית לצרכים הייחודיים של כל מטופל.</p>
+                        <p>נועה מאמינה בכוח הריפוי הטבעי שבכל אדם ומתמחה ביצירת סביבה בטוחה ותומכת שמאפשרת צמיחה ושינוי.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
+        <section id="services" class="services">
+            <div class="container">
+                <h2>תחומי התמחות</h2>
+                <div class="services-grid">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">🧠</div>
+                        <h3>טיפול בחרדות ופחדים</h3>
+                        <p>טיפול מקצועי בהפרעות חרדה, פאניקה, פוביות וחרדה חברתית. שימוש בטכניקות CBT מובלות מחקר.</p>
+                        <div class="price">₪350 לפגישה</div>
+                    </div>
+                    
+                    <div class="service-card fade-in">
+                        <div class="service-icon">💙</div>
+                        <h3>טיפול בדיכאון</h3>
+                        <p>ליווי רגיש ומקצועי בהתמודדות עם דיכאון, הפרעות מצב רוח וקשיים רגשיים. גישה אינטגרטיבית ומותאמת אישית.</p>
+                        <div class="price">₪350 לפגישה</div>
+                    </div>
+                    
+                    <div class="service-card fade-in">
+                        <div class="service-icon">⚡</div>
+                        <h3>טיפול בטראומות</h3>
+                        <p>התמחות בטיפול בטראומות באמצעות EMDR ושיטות מובלות מחקר. טיפול עדין ובטוח במטופלים שעברו חוויות טראומטיות.</p>
+                        <div class="price">₪400 לפגישה</div>
+                    </div>
+                    
+                    <div class="service-card fade-in">
+                        <div class="service-icon">👫</div>
+                        <h3>טיפול זוגי ומשפחתי</h3>
+                        <p>שיפור תקשורת, פתרון קונפליקטים וחיזוק הקשר הזוגי והמשפחתי. גישה מערכתית ומכוונת פתרונות.</p>
+                        <div class="price">₪450 לפגישה</div>
+                    </div>
+                    
+                    <div class="service-card fade-in">
+                        <div class="service-icon">🌱</div>
+                        <h3>טיפול בהתמודדות ושינוי</h3>
+                        <p>ליווי בתהליכי שינוי אישיים, קריירה, משברי אמצע חיים ופיתוח אישי. בניית חוסן נפשי וכלים להתמודדות.</p>
+                        <div class="price">₪350 לפגישה</div>
+                    </div>
+                    
+                    <div class="service-card fade-in">
+                        <div class="service-icon">👶</div>
+                        <h3>טיפול בילדים ובני נוער</h3>
+                        <p>התמחות בטיפול פסיכולוגי בילדים ובני נוער. התמודדות עם קשיים התנהגותיים, רגשיים וחברתיים.</p>
+                        <div class="price">₪300 לפגישה</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>צור קשר לפגישת היכרות</h2>
+                <div class="contact-content">
+                    <div class="contact-form fade-in">
+                        <h3 style="margin-bottom: 1.5rem;">טופס יצירת קשר</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">שם מלא:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">טלפון:</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">אימייל:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="treatmentType">סוג הטיפול המבוקש:</label>
+                                <select id="treatmentType" name="treatmentType">
+                                    <option value="">בחר סוג טיפול</option>
+                                    <option value="anxiety">טיפול בחרדות ופחדים</option>
+                                    <option value="depression">טיפול בדיכאון</option>
+                                    <option value="trauma">טיפול בטראומות</option>
+                                    <option value="couple">טיפול זוגי ומשפחתי</option>
+                                    <option value="change">טיפול בהתמודדות ושינוי</option>
+                                    <option value="children">טיפול בילדים ובני נוער</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">הודעה (אופציונלי):</label>
+                                <textarea id="message" name="message" placeholder="ספר/י קצת על עצמך והסיבה לפנייה..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">שלח בקשה</button>
+                            <p style="font-size: 0.9rem; margin-top: 1rem; opacity: 0.8;">
+                                🔒 הפרטים שלך נשמרים בסודיות מוחלטת ולא יועברו לצד שלישי
+                            </p>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info slide-in-right">
+                        <div class="info-card">
+                            <div class="info-icon">📞</div>
+                            <h3>טלפון</h3>
+                            <p>052-123-4567</p>
+                            <a href="https://wa.me/972521234567?text=שלום%20ד״ר%20רוזן,%20אני%20מעוניין/ת%20בפגישת%20היכרות%20לטיפול%20פסיכולוגי" 
+                               class="whatsapp-btn" target="_blank">
+                                📱 צור קשר ב-WhatsApp
+                            </a>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="info-icon">📍</div>
+                            <h3>מיקום</h3>
+                            <p>רחוב הרצל 45<br>תל אביב</p>
+                            <p style="font-size: 0.9rem; margin-top: 1rem;">
+                                🚗 חניה בסביבה<br>
+                                🚇 קרוב לתחנת רכבת השלום
+                            </p>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="info-icon">🕐</div>
+                            <h3>שעות קבלה</h3>
+                            <p>
+                                ראשון-חמישי: 09:00-20:00<br>
+                                שישי: 09:00-13:00<br>
+                                שבת: סגור
+                            </p>
+                            <p style="font-size: 0.9rem; margin-top: 1rem;">
+                                ✨ פגישת היכרות ראשונה ללא עלות!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
         <div class="container">
-            <div class="section-header animate-on-scroll">
-                <h2 class="section-title">תחומי התמחות</h2>
-                <p class="section-subtitle">
-                    מציעה מגוון רחב של שירותי טיפול פסיכולוגי המותאמים לצרכים האישיים של כל מטופל
-                </p>
-            </div>
+            <p>&copy; 2024 ד"ר נועה רוזן - פסיכולוגיה קלינית. כל הזכויות שמורות.</p>
+            <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.8;">
+                רישוי משרד הבריאות | חבר בלשכת הפסיכולוגים
+            </p>
+        </div>
+    </footer>
 
-            <div class="services-grid">
-                <div class="service-card animate-on-scroll">
-                    <div class="service-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3 class="service-title">טיפול אישי</h3>
-                    <p class="service-description">
-                        טיפול פסיכודינמי מעמיק המתמקד בחקר הדפסים רגשיים ובמתן כלים להתמודדות עם אתגרי החיים.
-                    </p>
-                    <ul class="service-features">
-                        <li>טיפול בדיכאון וחרדה</li>
-                        <li>התמודדות עם טראומות</li>
-                        <li>בעיות בדימוי עצמי</li>
-                        <li>קשיים בתפקוד חברתי</li>
-                    </ul>
-                    <button class="btn btn-primary" onclick="contactWhatsApp('טיפול אישי')">
-                        לפרטים נוספים
-                    </button>
-                </div>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
 
-                <div class="service-card animate-on-scroll">
-                    <div class="service-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 class="service-title">טיפול זוגי</h3>
-                    <p class="service-description">
-                        ליווי זוגות במשברים, שיפור תקשורת וחיזוק הקשר הרגשי והאינטימי בין בני הזוג.
-                    </p>
-                    <ul class="service-features">
-                        <li>שיפור תקשורת זוגית</li>
-                        <li>פתרון קונפליקטים</li>
-                        <li>חיזוק האינטימיות</li>
-                        <li>התמודדות עם בגידות</li>
-                    </ul>
-                    <button class="btn btn-primary" onclick="contactWhatsApp('טיפול זוגי')">
-                        לפרטים נוספים
-                    </button>
-                </div>
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const phone = formData.get('phone');
+            const treatmentType = formData.get('treatmentType');
+            const message = formData.get('message');
+            
+            // Create WhatsApp message
+            let whatsappMessage = `שלום ד״ר רוזן,%0A`;
+            whatsappMessage += `השם שלי הוא ${name}%0A`;
+            whatsappMessage += `הטלפון שלי: ${phone}%0A`;
+            
+            if (treatmentType) {
+                const treatmentNames = {
+                    'anxiety': 'טיפול בחרדות ופחדים',
+                    'depression': 'טיפול בדיכאון',
+                    'trauma': 'טיפול בטראומות',
+                    'couple': 'טיפול זוגי ומשפחתי',
+                    'change': 'טיפול בהתמודדות ושינוי',
+                    'children': 'טיפול בילדים ובני נוער'
+                };
+                whatsappMessage += `אני מעוניין/ת ב: ${treatmentNames[treatmentType]}%0A`;
+            }
+            
+            if (message) {
+                whatsappMessage += `הודעה נוספת: ${message}%0A`;
+            }
+            
+            whatsappMessage += `%0Aאשמח לקבוע פגישת היכרות. תודה!`;
+            
+            // Open WhatsApp
+            window.open(`https://wa.me/972521234567?text=${whatsappMessage}`, '_blank');
+            
+            // Show success message
+            alert('תודה! ההודעה נשלחה ב-WhatsApp. נחזור אליך בהקדם.');
+            this.reset();
+        });
 
-                <div class="service-card animate-on-scroll">
-                    <div class="service-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3 class="service-title">טיפול משפחתי</h3>
-                    <p class="service-description">
-                        טיפול המשלב את כל בני המשפחה ומתמקד בשיפור הדינמיקה המשפחתית והתקשורת.
-                    </p>
-                    <ul class="service-features">
-                        <li>קונפליקטים בין הורים לילדים</li>
-                        <li>שיפור התקשורת המשפחתית</li>
-                        <li>התמודדות עם משברי חיים</li>
-                        <li>חיזוק הקשרים המשפחתיים</li>
-                    </ul>
-                    <button class="btn btn-primary" onclick="contactWhatsApp('טיפול משפחתי')">
-                        לפרטים נוספים
-                    </button>
-                </div>
+        // Add animation classes on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-                <div class="service-card animate-on-scroll">
-                    <div class="service-icon">
-                        <i class="fas fa-child"></i>
-                    </div>
-                    <h3 class="service-title">טיפול בילדים ונוער</h3>
-                    <p class="service-description">
-                        טיפול מותאם לגילאים הרכים המתמקד בבעיות התפתחותיות, רגשיות והתנהגותיות
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.fade-in, .slide-in-right').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.8s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
