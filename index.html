@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ד"ר נועה רוזן - פסיכולוגיה קלינית</title>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>מולטיבראון | 5 תחומים, פתרון אחד מושלם | ערדית בראון</title>
+    <meta name="description" content="מולטיבראון - האקוסיסטם המושלם לנופש, אירועים, מדיה, קהילה ושיווק דיגיטלי. בניהולה המקצועי של ערדית בראון.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --secondary-gold: #B8860B;
+            --accent-orange: #FF8C00;
+            --luxury-brown: #8B4513;
+            --warm-cream: #FDF5E6;
+            --champagne: #F7E7CE;
+            --bronze: #CD7F32;
+            --copper: #B87333;
+            --rich-brown: #654321;
+            --text-dark: #2F1B14;
+            --text-light: #8B7355;
+            --white: #FFFFFF;
+            --surface: #FEFCF8;
+            --gradient-luxury: linear-gradient(135deg, #D4AF37 0%, #FF8C00 50%, #B8860B 100%);
+            --gradient-warm: linear-gradient(135deg, #FF8C00 0%, #D4AF37 100%);
+            --gradient-rich: linear-gradient(135deg, #8B4513 0%, #CD7F32 50%, #D4AF37 100%);
+            --gradient-glass: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(255, 140, 0, 0.1) 100%);
+            --shadow-gold: 0 20px 60px rgba(212, 175, 55, 0.3);
+            --shadow-soft: 0 10px 40px rgba(139, 69, 19, 0.15);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -13,67 +38,110 @@
         }
 
         body {
-            font-family: 'Heebo', sans-serif;
+            font-family: 'Heebo', 'Inter', Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
+            color: var(--text-dark);
+            background: var(--surface);
+            overflow-x: hidden;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* Header */
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+        /* Header Premium */
+        .header {
             position: fixed;
             top: 0;
-            left: 0;
-            right: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(30px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
             z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 30px rgba(212, 175, 55, 0.1);
         }
 
-        nav {
+        .nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 2rem;
+            padding: 1.2rem 0;
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
             font-weight: 700;
-            color: #4a90e2;
+            background: var(--gradient-luxury);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            letter-spacing: 3px;
+            position: relative;
+        }
+
+        .logo::after {
+            content: 'by Erdit Brown';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            font-size: 0.4em;
+            color: var(--text-light);
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            letter-spacing: 1px;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 3rem;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: #333;
+            color: var(--text-dark);
             font-weight: 500;
-            transition: color 0.3s ease;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            letter-spacing: 0.5px;
         }
 
         .nav-links a:hover {
-            color: #4a90e2;
+            color: var(--primary-gold);
+            transform: translateY(-2px);
         }
 
-        /* Hero Section */
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--gradient-luxury);
+            transition: width 0.4s ease;
+            border-radius: 3px;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Premium */
         .hero {
-            padding: 120px 0 80px;
-            text-align: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: 
+                linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(255, 140, 0, 0.1) 100%),
+                radial-gradient(circle at 20% 80%, rgba(139, 69, 19, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
             position: relative;
             overflow: hidden;
         }
@@ -85,504 +153,1364 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23fff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23fff" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="200" r="100" fill="url(%23a)"><animate attributeName="cy" values="200;800;200" dur="8s" repeatCount="indefinite"/></circle><circle cx="800" cy="300" r="80" fill="url(%23a)"><animate attributeName="cx" values="800;200;800" dur="10s" repeatCount="indefinite"/></circle></svg>');
-            animation: float 20s infinite linear;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="luxury" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(212,175,55,0.1)"><animate attributeName="r" values="1;2;1" dur="4s" repeatCount="indefinite"/></circle><circle cx="5" cy="15" r="0.5" fill="rgba(255,140,0,0.1)"><animate attributeName="r" values="0.5;1.5;0.5" dur="6s" repeatCount="indefinite"/></circle></pattern></defs><rect width="100%" height="100%" fill="url(%23luxury)"/></svg>');
+            opacity: 0.6;
         }
 
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .luxury-badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            color: var(--luxury-brown);
+            padding: 1.2rem 3rem;
+            border-radius: 60px;
+            margin-bottom: 3rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            animation: luxuryPulse 5s ease-in-out infinite;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .luxury-badge::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+            animation: rotate 8s linear infinite;
+        }
+
+        @keyframes luxuryPulse {
+            0%, 100% { 
+                transform: scale(1); 
+                box-shadow: 0 8px 32px rgba(212, 175, 55, 0.3);
+            }
+            50% { 
+                transform: scale(1.05); 
+                box-shadow: 0 15px 50px rgba(212, 175, 55, 0.5);
+            }
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-family: 'Playfair Display', serif;
+            font-size: 5.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            line-height: 1.1;
+            letter-spacing: 4px;
+            background: var(--gradient-luxury);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
         .hero .subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
+            font-size: 1.8rem;
+            margin-bottom: 3rem;
+            font-weight: 300;
+            color: var(--text-light);
+            letter-spacing: 1px;
+            line-height: 1.4;
         }
 
         .hero .description {
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            opacity: 0.8;
+            font-size: 1.3rem;
+            margin-bottom: 4rem;
+            color: var(--text-dark);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
         }
 
-        .cta-button {
-            display: inline-block;
-            background: #ff6b6b;
+        /* Business Domains */
+        .domains-preview {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .domain-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            padding: 2rem 1.5rem;
+            border-radius: 25px;
+            border: 2px solid rgba(212, 175, 55, 0.2);
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .domain-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-luxury);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .domain-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: var(--shadow-gold);
+            border-color: var(--primary-gold);
+        }
+
+        .domain-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .domain-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-luxury);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        .domain-icon i {
+            font-size: 2rem;
             color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 50px;
+        }
+
+        .domain-card h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: var(--text-dark);
+        }
+
+        .domain-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.4;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .btn {
+            padding: 1.5rem 3.5rem;
+            border: none;
+            border-radius: 60px;
+            font-size: 1.2rem;
             font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.5px;
+            box-shadow: var(--shadow-soft);
         }
 
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s;
         }
 
-        /* About Section */
-        .about {
-            padding: 80px 0;
-            background: white;
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: var(--gradient-luxury);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--luxury-brown);
+            border: 2px solid var(--primary-gold);
+        }
+
+        .btn:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(212, 175, 55, 0.4);
+        }
+
+        /* About Erdit Section */
+        .about-erdit {
+            padding: 8rem 0;
+            background: var(--white);
+            position: relative;
         }
 
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 4rem;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 6rem;
             align-items: center;
         }
 
-        .profile-card {
-            background: linear-gradient(135deg, #4a90e2 0%, #5ba3f5 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(74, 144, 226, 0.3);
-            transform: perspective(1000px) rotateY(-5deg);
-            transition: transform 0.3s ease;
+        .about-image {
+            position: relative;
         }
 
-        .profile-card:hover {
-            transform: perspective(1000px) rotateY(0deg);
+        .erdit-photo {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 30px;
+            box-shadow: var(--shadow-gold);
+            position: relative;
+            z-index: 2;
         }
 
-        .profile-image {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            margin: 0 auto 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            border: 4px solid rgba(255,255,255,0.3);
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-luxury);
+            border-radius: 30px;
+            z-index: 1;
+            opacity: 0.3;
         }
 
         .about-text h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #333;
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            background: var(--gradient-luxury);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .about-text .subtitle {
+            font-size: 1.4rem;
+            color: var(--accent-orange);
+            margin-bottom: 2rem;
+            font-weight: 600;
+            letter-spacing: 1px;
         }
 
         .about-text p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            color: #666;
+            font-size: 1.15rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            color: var(--text-dark);
         }
 
-        /* Services Section */
-        .services {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        .achievements {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
         }
 
-        .services h2 {
+        .achievement {
             text-align: center;
+            padding: 2rem;
+            background: var(--surface);
+            border-radius: 20px;
+            border: 2px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .achievement h4 {
             font-size: 2.5rem;
-            margin-bottom: 3rem;
+            font-weight: 800;
+            color: var(--primary-gold);
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .achievement p {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-bottom: 0;
+        }
+
+        /* Business Domains Full Section */
+        .business-domains {
+            padding: 8rem 0;
+            background: var(--surface);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 6rem;
+        }
+
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            background: var(--gradient-luxury);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 2px;
+        }
+
+        .section-title p {
+            font-size: 1.4rem;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .domains-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 3rem;
+        }
+
+        .business-card {
+            background: white;
+            padding: 4rem;
+            border-radius: 30px;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .business-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: var(--gradient-luxury);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .business-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: var(--shadow-gold);
+            border-color: var(--primary-gold);
+        }
+
+        .business-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .business-icon {
+            width: 100px;
+            height: 100px;
+            background: var(--gradient-luxury);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+            position: relative;
+        }
+
+        .business-icon::after {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: var(--gradient-luxury);
+            border-radius: 28px;
+            z-index: -1;
+            opacity: 0.3;
+            animation: businessGlow 4s ease-in-out infinite;
+        }
+
+        @keyframes businessGlow {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.6; }
+        }
+
+        .business-icon i {
+            font-size: 2.5rem;
             color: white;
         }
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+        .business-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
         }
 
-        .service-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #4a90e2;
-        }
-
-        .service-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-
-        .service-card p {
-            color: #666;
-            margin-bottom: 1rem;
-        }
-
-        .price {
+        .business-card .subtitle {
             font-size: 1.2rem;
+            color: var(--accent-orange);
+            margin-bottom: 1.5rem;
             font-weight: 600;
-            color: #ff6b6b;
+        }
+
+        .business-card p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .business-features {
+            list-style: none;
+            margin-bottom: 3rem;
+        }
+
+        .business-features li {
+            padding: 1rem 0;
+            color: var(--text-dark);
+            position: relative;
+            padding-right: 3rem;
+            font-weight: 500;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            font-size: 1.05rem;
+        }
+
+        .business-features li:last-child {
+            border-bottom: none;
+        }
+
+        .business-features li::before {
+            content: '✨';
+            position: absolute;
+            right: 0;
+            font-size: 1.3rem;
+        }
+
+        .business-btn {
+            background: var(--gradient-luxury);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            letter-spacing: 0.5px;
+        }
+
+        .business-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 6rem 0;
+            background: var(--luxury-brown);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="stats" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="2" fill="rgba(212,175,55,0.1)"/><circle cx="10" cy="30" r="1" fill="rgba(255,140,0,0.1)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23stats)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 4rem;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stat-item {
+            padding: 2.5rem;
+        }
+
+        .stat-item h3 {
+            font-size: 4.5rem;
+            font-weight: 800;
             margin-bottom: 1rem;
+            color: var(--primary-gold);
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .stat-item p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 8rem 0;
+            background: white;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .testimonial-card {
+            background: var(--surface);
+            padding: 3rem;
+            border-radius: 25px;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            text-align: center;
+            border: 2px solid rgba(212, 175, 55, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-gold);
+            border-color: var(--primary-gold);
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -15px;
+            left: 30px;
+            font-size: 5rem;
+            color: var(--primary-gold);
+            font-family: 'Playfair Display', serif;
+            opacity: 0.7;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 2rem;
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: var(--text-dark);
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--accent-orange);
+            font-size: 1.1rem;
+        }
+
+        .testimonial-role {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-top: 0.5rem;
         }
 
         /* Contact Section */
         .contact {
-            padding: 80px 0;
-            background: white;
-        }
-
-        .contact h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #333;
+            padding: 8rem 0;
+            background: var(--surface);
         }
 
         .contact-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 6rem;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 4rem;
+            border-radius: 30px;
+            box-shadow: var(--shadow-soft);
+            border: 2px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            background: var(--gradient-luxury);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            background: var(--surface);
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 12px 40px rgba(212, 175, 55, 0.2);
+        }
+
+        .contact-item i {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-luxury);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
         }
 
         .contact-form {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 2rem;
-            border-radius: 20px;
-            color: white;
+            background: white;
+            padding: 4rem;
+            border-radius: 30px;
+            box-shadow: var(--shadow-soft);
+            border: 2px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .contact-form h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            background: var(--gradient-luxury);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 2.5rem;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
             font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: 0.3px;
         }
 
         .form-group input,
-        .form-group select,
-        .form-group textarea {
+        .form-group textarea,
+        .form-group select {
             width: 100%;
-            padding: 12px;
-            border: none;
-            border-radius: 10px;
-            font-size: 1rem;
-            background: rgba(255,255,255,0.9);
+            padding: 1.5rem;
+            border: 2px solid rgba(212, 175, 55, 0.2);
+            border-radius: 20px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            font-family: 'Heebo', Arial, sans-serif;
+            background: var(--surface);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-gold);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+            background: white;
         }
 
         .form-group textarea {
-            height: 120px;
+            height: 150px;
             resize: vertical;
         }
 
         .submit-btn {
-            background: #ff6b6b;
+            width: 100%;
+            background: var(--gradient-luxury);
             color: white;
-            padding: 12px 30px;
+            padding: 1.5rem 2rem;
             border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
+            border-radius: 25px;
+            font-size: 1.3rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
+            letter-spacing: 0.5px;
         }
 
         .submit-btn:hover {
-            background: #ff5252;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(212, 175, 55, 0.4);
         }
 
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .info-card {
-            background: linear-gradient(135deg, #4a90e2 0%, #5ba3f5 100%);
-            padding: 2rem;
-            border-radius: 15px;
-            color: white;
-            text-align: center;
-        }
-
-        .info-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .whatsapp-btn {
-            display: inline-block;
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 80px;
+            height: 80px;
             background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
-            padding: 15px 25px;
+            font-size: 2.2rem;
             text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            margin-top: 1rem;
-            transition: all 0.3s ease;
+            box-shadow: 0 10px 40px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            animation: whatsappFloat 6s ease-in-out infinite;
         }
 
-        .whatsapp-btn:hover {
-            background: #128c7e;
-            transform: scale(1.05);
+        @keyframes whatsappFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-15px) rotate(5deg); }
+            50% { transform: translateY(0) rotate(0deg); }
+            75% { transform: translateY(-8px) rotate(-3deg); }
         }
 
         /* Footer */
-        footer {
-            background: #2c3e50;
+        .footer {
+            background: var(--text-dark);
             color: white;
+            padding: 4rem 0;
             text-align: center;
-            padding: 2rem 0;
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
 
-            .about-content,
+        .footer-section h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-gold);
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.8rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 2rem;
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .domains-preview {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+                text-align: center;
+            }
+            
             .contact-content {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 4rem;
             }
+        }
 
+        @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
 
-            .services-grid {
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.4rem;
+            }
+
+            .domains-preview {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .domains-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .business-card {
+                padding: 2.5rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .achievements {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 400px;
+                justify-content: center;
             }
         }
 
-        /* Animations */
-        .fade-in {
-            animation: fadeIn 1s ease-in;
-        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+            .hero h1 {
+                font-size: 2.8rem;
+            }
 
-        .slide-in-right {
-            animation: slideInRight 1s ease-out;
-        }
+            .logo {
+                font-size: 2.2rem;
+            }
 
-        @keyframes slideInRight {
-            from { opacity: 0; transform: translateX(50px); }
-            to { opacity: 1; transform: translateX(0); }
+            .business-card {
+                padding: 2rem;
+            }
+
+            .whatsapp-float {
+                bottom: 20px;
+                left: 20px;
+                width: 70px;
+                height: 70px;
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">ד"ר נועה רוזן</div>
-            <ul class="nav-links">
-                <li><a href="#home">בית</a></li>
-                <li><a href="#about">אודות</a></li>
-                <li><a href="#services">שירותים</a></li>
-                <li><a href="#contact">יצירת קשר</a></li>
-            </ul>
+    <!-- Header -->
+    <header class="header">
+        <nav class="container">
+            <div class="nav">
+                <a href="#" class="logo">MULTIBRAWN</a>
+                <ul class="nav-links">
+                    <li><a href="#home">בית</a></li>
+                    <li><a href="#about">אודות ערדית</a></li>
+                    <li><a href="#domains">תחומי עסק</a></li>
+                    <li><a href="#testimonials">המלצות</a></li>
+                    <li><a href="#contact">צור קשר</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <h1 class="fade-in">ד"ר נועה רוזן</h1>
-                <p class="subtitle fade-in">פסיכולוגיה קלינית מקצועית ואמפתית</p>
-                <p class="description fade-in">מומחית בטיפול פסיכולוגי עם ניסיון של 15+ שנה בליווי אנשים לחיים טובים יותר. גישה חמה, מקצועית ומותאמת אישית לכל מטופל.</p>
-                <a href="#contact" class="cta-button fade-in">קביעת פגישת היכרות חינם</a>
-            </div>
-        </section>
-
-        <section id="about" class="about">
-            <div class="container">
-                <div class="about-content">
-                    <div class="profile-card slide-in-right">
-                        <div class="profile-image">👩‍⚕️</div>
-                        <h3>ד"ר נועה רוזן</h3>
-                        <p>פסיכולוגית קלינית מורשית</p>
-                        <div style="margin-top: 1rem;">
-                            <div style="margin-bottom: 0.5rem;"><strong>15+</strong> שנות ניסיון</div>
-                            <div style="margin-bottom: 0.5rem;"><strong>500+</strong> מטופלים</div>
-                            <div><strong>רישוי</strong> משרד הבריאות</div>
-                        </div>
-                    </div>
-                    <div class="about-text fade-in">
-                        <h2>על המטפלת</h2>
-                        <p>ד"ר נועה רוזן היא פסיכולוגית קלינית מורשית עם ניסיון נרחב בטיפול פסיכולוגי. השלימה דוקטורט בפסיכולוגיה קלינית באונiversיטת תל אביב והתמחתה בטיפול בחרדות, דיכאון וטראומות.</p>
-                        <p>הגישה הטיפולית שלה משלבת שיטות מובלות במחקר כמו CBT, DBT ו-EMDR, תוך התאמה אישית לצרכים הייחודיים של כל מטופל.</p>
-                        <p>נועה מאמינה בכוח הריפוי הטבעי שבכל אדם ומתמחה ביצירת סביבה בטוחה ותומכת שמאפשרת צמיחה ושינוי.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="services" class="services">
-            <div class="container">
-                <h2>תחומי התמחות</h2>
-                <div class="services-grid">
-                    <div class="service-card fade-in">
-                        <div class="service-icon">🧠</div>
-                        <h3>טיפול בחרדות ופחדים</h3>
-                        <p>טיפול מקצועי בהפרעות חרדה, פאניקה, פוביות וחרדה חברתית. שימוש בטכניקות CBT מובלות מחקר.</p>
-                        <div class="price">₪350 לפגישה</div>
-                    </div>
-                    
-                    <div class="service-card fade-in">
-                        <div class="service-icon">💙</div>
-                        <h3>טיפול בדיכאון</h3>
-                        <p>ליווי רגיש ומקצועי בהתמודדות עם דיכאון, הפרעות מצב רוח וקשיים רגשיים. גישה אינטגרטיבית ומותאמת אישית.</p>
-                        <div class="price">₪350 לפגישה</div>
-                    </div>
-                    
-                    <div class="service-card fade-in">
-                        <div class="service-icon">⚡</div>
-                        <h3>טיפול בטראומות</h3>
-                        <p>התמחות בטיפול בטראומות באמצעות EMDR ושיטות מובלות מחקר. טיפול עדין ובטוח במטופלים שעברו חוויות טראומטיות.</p>
-                        <div class="price">₪400 לפגישה</div>
-                    </div>
-                    
-                    <div class="service-card fade-in">
-                        <div class="service-icon">👫</div>
-                        <h3>טיפול זוגי ומשפחתי</h3>
-                        <p>שיפור תקשורת, פתרון קונפליקטים וחיזוק הקשר הזוגי והמשפחתי. גישה מערכתית ומכוונת פתרונות.</p>
-                        <div class="price">₪450 לפגישה</div>
-                    </div>
-                    
-                    <div class="service-card fade-in">
-                        <div class="service-icon">🌱</div>
-                        <h3>טיפול בהתמודדות ושינוי</h3>
-                        <p>ליווי בתהליכי שינוי אישיים, קריירה, משברי אמצע חיים ופיתוח אישי. בניית חוסן נפשי וכלים להתמודדות.</p>
-                        <div class="price">₪350 לפגישה</div>
-                    </div>
-                    
-                    <div class="service-card fade-in">
-                        <div class="service-icon">👶</div>
-                        <h3>טיפול בילדים ובני נוער</h3>
-                        <p>התמחות בטיפול פסיכולוגי בילדים ובני נוער. התמודדות עם קשיים התנהגותיים, רגשיים וחברתיים.</p>
-                        <div class="price">₪300 לפגישה</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>צור קשר לפגישת היכרות</h2>
-                <div class="contact-content">
-                    <div class="contact-form fade-in">
-                        <h3 style="margin-bottom: 1.5rem;">טופס יצירת קשר</h3>
-                        <form id="contactForm">
-                            <div class="form-group">
-                                <label for="name">שם מלא:</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="phone">טלפון:</label>
-                                <input type="tel" id="phone" name="phone" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email">אימייל:</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="treatmentType">סוג הטיפול המבוקש:</label>
-                                <select id="treatmentType" name="treatmentType">
-                                    <option value="">בחר סוג טיפול</option>
-                                    <option value="anxiety">טיפול בחרדות ופחדים</option>
-                                    <option value="depression">טיפול בדיכאון</option>
-                                    <option value="trauma">טיפול בטראומות</option>
-                                    <option value="couple">טיפול זוגי ומשפחתי</option>
-                                    <option value="change">טיפול בהתמודדות ושינוי</option>
-                                    <option value="children">טיפול בילדים ובני נוער</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message">הודעה (אופציונלי):</label>
-                                <textarea id="message" name="message" placeholder="ספר/י קצת על עצמך והסיבה לפנייה..."></textarea>
-                            </div>
-                            
-                            <button type="submit" class="submit-btn">שלח בקשה</button>
-                            <p style="font-size: 0.9rem; margin-top: 1rem; opacity: 0.8;">
-                                🔒 הפרטים שלך נשמרים בסודיות מוחלטת ולא יועברו לצד שלישי
-                            </p>
-                        </form>
-                    </div>
-                    
-                    <div class="contact-info slide-in-right">
-                        <div class="info-card">
-                            <div class="info-icon">📞</div>
-                            <h3>טלפון</h3>
-                            <p>052-123-4567</p>
-                            <a href="https://wa.me/972521234567?text=שלום%20ד״ר%20רוזן,%20אני%20מעוניין/ת%20בפגישת%20היכרות%20לטיפול%20פסיכולוגי" 
-                               class="whatsapp-btn" target="_blank">
-                                📱 צור קשר ב-WhatsApp
-                            </a>
-                        </div>
-                        
-                        <div class="info-card">
-                            <div class="info-icon">📍</div>
-                            <h3>מיקום</h3>
-                            <p>רחוב הרצל 45<br>תל אביב</p>
-                            <p style="font-size: 0.9rem; margin-top: 1rem;">
-                                🚗 חניה בסביבה<br>
-                                🚇 קרוב לתחנת רכבת השלום
-                            </p>
-                        </div>
-                        
-                        <div class="info-card">
-                            <div class="info-icon">🕐</div>
-                            <h3>שעות קבלה</h3>
-                            <p>
-                                ראשון-חמישי: 09:00-20:00<br>
-                                שישי: 09:00-13:00<br>
-                                שבת: סגור
-                            </p>
-                            <p style="font-size: 0.9rem; margin-top: 1rem;">
-                                ✨ פגישת היכרות ראשונה ללא עלות!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
         <div class="container">
-            <p>&copy; 2024 ד"ר נועה רוזן - פסיכולוגיה קלינית. כל הזכויות שמורות.</p>
-            <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.8;">
-                רישוי משרד הבריאות | חבר בלשכת הפסיכולוגים
-            </p>
+            <div class="hero-content">
+                <div class="luxury-badge">
+                    <i class="fas fa-crown"></i>
+                    האקוסיסטם העסקי המושלם
+                </div>
+                <h1>MULTIBRAWN</h1>
+                <p class="subtitle">5 תחומים • פתרון אחד מושלם • בניהולה של ערדית בראון</p>
+                <p class="description">
+                    ברוכים הבאים לעולם שבו כל חלום הופך למציאות. מנופש יוקרתי ואירועים בלתי נשכחים, 
+                    דרך הפקות מדיה מרהיבות וניהול קהילות, ועד לשיווק דיגיטלי מתקדם - כל מה שאתם צריכים במקום אחד.
+                </p>
+
+                <!-- Business Domains Preview -->
+                <div class="domains-preview">
+                    <div class="domain-card">
+                        <div class="domain-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h4>MultiStay</h4>
+                        <p>וילות וצימרים יוקרתיים</p>
+                    </div>
+                    <div class="domain-card">
+                        <div class="domain-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4>MultiEvents</h4>
+                        <p>אירועים פרטיים וחתונות</p>
+                    </div>
+                    <div class="domain-card">
+                        <div class="domain-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h4>MultiMedia</h4>
+                        <p>הפקת סרטונים אומנותיים</p>
+                    </div>
+                    <div class="domain-card">
+                        <div class="domain-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>MultiCommunity</h4>
+                        <p>ניהול קהילות דיגיטליות</p>
+                    </div>
+                    <div class="domain-card">
+                        <div class="domain-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4>MultiMarketing</h4>
+                        <p>שיווק דיגיטלי ואתרים</p>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="#domains" class="btn btn-primary">
+                        <i class="fas fa-arrow-down"></i>
+                        גלו את התחומים שלנו
+                    </a>
+                    <a href="https://wa.me/972500000000" class="btn btn-secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        יצירת קשר מיידית
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Erdit Section -->
+    <section id="about" class="about-erdit">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://i.imghippo.com/files/FSCk5519To.jpg" alt="ערדית בראון - מייסדת מולטיבראון" class="erdit-photo">
+                </div>
+                <div class="about-text">
+                    <h2>ערדית בראון</h2>
+                    <p class="subtitle">מייסדת ומנכ"לית מולטיבראון</p>
+                    <p>
+                        <strong>"החלום שלי היה ליצור אקוסיסטם שלם שבו כל לקוח יקבל פתרון מושלם לכל צורך."</strong>
+                    </p>
+                    <p>
+                        עם למעלה מ-15 שנות ניסיון בתחום האירוח והשיווק הדיגיטלי, ערדית בראון בנתה את מולטיבראון 
+                        כחזון מהפכני - חברה אחת שמציעה 5 תחומי שירות משלימים ברמה הגבוהה ביותר.
+                    </p>
+                    <p>
+                        מהתמחות ראשונית בנופש יוקרתי, דרך הרחבה לאירועים פרטיים והפקות מדיה, ועד לחדשנות 
+                        בניהול קהילות ושיווק דיגיטלי - ערדית הוכיחה שאפשר להיות מצוינים בהכל.
+                    </p>
+                    <p>
+                        <strong>"אני מאמינה שכל לקוח ראוי לחוויה מושלמת, לא משנה איזה שירות הוא בוחר."</strong>
+                    </p>
+                    
+                    <div class="achievements">
+                        <div class="achievement">
+                            <h4>500+</h4>
+                            <p>פרויקטים מוצלחים</p>
+                        </div>
+                        <div class="achievement">
+                            <h4>15</h4>
+                            <p>שנות ניסיון</p>
+                        </div>
+                        <div class="achievement">
+                            <h4>98%</h4>
+                            <p>שביעות רצון לקוחות</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Domains Section -->
+    <section id="domains" class="business-domains">
+        <div class="container">
+            <div class="section-title">
+                <h2>תחומי העסק שלנו</h2>
+                <p>חמישה תחומים מתקדמים, כל אחד מנוהל ברמה הגבוהה ביותר עם מומחיות ייעודית ושירות אישי</p>
+            </div>
+
+            <div class="domains-grid">
+                <!-- MultiStay -->
+                <div class="business-card">
+                    <div class="business-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>MultiStay</h3>
+                    <p class="subtitle">וילות וצימרים יוקרתיים להשכרה יומית</p>
+                    <p>
+                        נופש שמתחיל באיכות. ב'מולטי בראון' אנחנו מאמינים שנופש מושלם מתחיל בפרטים הקטנים - 
+                        ולכן אנו מתמקדים בהצעת נכסים נבחרים בלבד: וילות, צימרים ודירות נופש מעוצבים ברמה גבוהה.
+                    </p>
+                    <ul class="business-features">
+                        <li>וילות יוקרה עם בריכות פרטיות</li>
+                        <li>צימרים רומנטיים מעוצבים</li>
+                        <li>דירות נופש משפחתיות</li>
+                        <li>ליווי אישי בבחירת המקום</li>
+                        <li>שירות 24/7 ותמיכה מלאה</li>
+                        <li>הזמנה אונליין מהירה וקלה</li>
+                    </ul>
+                    <button class="business-btn" onclick="openDomain('multistay')">
+                        כנסו לאתר MultiStay →
+                    </button>
+                </div>
+
+                <!-- MultiEvents -->
+                <div class="business-card">
+                    <div class="business-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>MultiEvents</h3>
+                    <p class="subtitle">שבתות חתן ואירועים פרטיים</p>
+                    <p>
+                        האירוע שלכם - בידיים טובות. שבת חתן, חתונה קטנה, בר מצווה או כל שמחה אינטימית - 
+                        אנחנו כאן כדי להפוך את היום שלכם לחוויה בלתי נשכחת עם תשומת לב מושלמת לכל פרט.
+                    </p>
+                    <ul class="business-features">
+                        <li>שבתות חתן מותאמות אישית</li>
+                        <li>חתונות קמות ואירועים פרטיים</li>
+                        <li>בר/בת מצווה חגיגיים</li>
+                        <li>התאמה לציבור דתי וחרדי</li>
+                        <li>מטבח כשר למהדרין</li>
+                        <li>ליווי מלא מהתכנון ועד הביצוע</li>
+                    </ul>
+                    <button class="business-btn" onclick="openDomain('multievents')">
+                        כנסו לאתר MultiEvents →
+                    </button>
+                </div>
+
+                <!-- MultiMedia -->
+                <div class="business-card">
+                    <div class="business-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>MultiMedia</h3>
+                    <p class="subtitle">הפקת סרטונים אומנותיים לאירוח</p>
+                    <p>
+                        החיים הם סרט - אנחנו מפיקים אותו. אם אתם בעלי נכס או מארחים שמעוניינים להציג את המקום 
+                        שלכם בצורה ייחודית, שירות הפקת הסרטונים האומנותיים שלנו נועד בדיוק עבורכם.
+                    </p>
+                    <ul class="business-features">
+                        <li>סרטונים שיווקיים ברמה אומנותית</li>
+                        <li>תסריט חכם וצילום מקצועי</li>
+                        <li>עריכה מתקדמת ואפקטים ויזואליים</li>
+                        <li>הפקה מלאה מהרעיון ועד התוצר</li>
+                        <li>התאמה לפלטפורמות דיגיטליות שונות</li>
+                        <li>ליווי בקמפיינים ושיווק התוכן</li>
+                    </ul>
+                    <button class="business-btn" onclick="openDomain('multimedia')">
+                        כנסו לאתר MultiMedia →
+                    </button>
+                </div>
+
+                <!-- MultiCommunity -->
+                <div class="business-card">
+                    <div class="business-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>MultiCommunity</h3>
+                    <p class="subtitle">קשרים חברתיים וקהילתיים</p>
+                    <p>
+                        חיבורים שעושים את ההבדל. הכוח של קהילה הוא עצום - וב'מולטי בראון' אנחנו יודעות איך לרתום 
+                        אותו לשירות הלקוחות שלנו באמצעות ניהול קהילות דיגיטליות מתקדם ויעיל.
+                    </p>
+                    <ul class="business-features">
+                        <li>ניהול קבוצות פייסבוק ייעודיות</li>
+                        <li>דפי אינסטגרם פעילים ומעורבים</li>
+                        <li>ערוצי וואטסאפ סגורים ומקצועיים</li>
+                        <li>חיבור בין לקוחות לספקים איכותיים</li>
+                        <li>מיקוד בקהלי יעד ספציפיים</li>
+                        <li>גישה אותנטית ולא פרסומית</li>
+                    </ul>
+                    <button class="business-btn" onclick="openDomain('multicommunity')">
+                        כנסו לאתר MultiCommunity →
+                    </button>
+                </div>
+
+                <!-- MultiMarketing -->
+                <div class="business-card">
+                    <div class="business-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>MultiMarketing</h3>
+                    <p class="subtitle">פלטפורמת שיווק דיגיטלי ואתרים עסקיים</p>
+                    <p>
+                        המהפכה הדיגיטלית שלכם מתחילה כאן. MultiMarketing משלב את פלטפורמת WebMaster Pro לבניית אתרים 
+                        עסקיים מתקדמים עם שירותי שיווק דיגיטלי מלאים ואוטומציות חכמות.
+                    </p>
+                    <ul class="business-features">
+                        <li>בניית אתרים עסקיים מקצועיים (WebMaster Pro)</li>
+                        <li>קמפיינים ממוקדים ברשתות החברתיות</li>
+                        <li>SEO מתקדם ואופטימיזציה</li>
+                        <li>אוטומציות שיווק ו-CRM מתקדם</li>
+                        <li>כלי AI ליצירת תוכן</li>
+                        <li>ניהול מוניטין דיגיטלי</li>
+                    </ul>
+                    <button class="business-btn" onclick="openDomain('multimarketing')">
+                        כנסו לאתר MultiMarketing →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3 data-target="500">0</h3>
+                    <p>פרויקטים מוצלחים</p>
+                </div>
+                <div class="stat-item">
+                    <h3 data-target="15">0</h3>
+                    <p>שנות ניסיון</p>
+                </div>
+                <div class="stat-item">
+                    <h3 data-target="5">0</h3>
+                    <p>תחומי מומחיות</p>
+                </div>
+                <div class="stat-item">
+                    <h3 data-target="98">0</h3>
+                    <p>% שביעות רצון</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>מה אומרים עלינו</h2>
+                <p>המלצות מלקוחות מרוצים שחוו איתנו את השירות ברמה הגבוהה ביותר</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "עבדנו עם ערדית על שבת החתן שלנו והיא פשוט הפכה את החלום שלנו למציאות. 
+                        כל פרט היה מושלם, השירות היה ברمה עולמית והתוצאה עלתה על כל הציפיות. 
+                        ערדית ומולטיבראון - זה פשוט מקצועיות ללא פשרות!"
+                    </p>
+                    <div class="testimonial-author">דוד ושרה כהן</div>
+                    <div class="testimonial-role">זוג מרוצה • MultiEvents</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "כשהחלטנו להשכיר את הוילה שלנו לא ידענו איך להתחיל. ערדית לא רק עזרה לנו 
+                        עם השיווק והניהול, היא גם הפיקה לנו סרטון מדהים שהפך את המקום שלנו למבוקש ביותר באזור. 
+                        תוך חודשיים היינו עם תפוסה מלאה!"
+                    </p>
+                    <div class="testimonial-author">אבי מזרחי</div>
+                    <div class="testimonial-role">בעל וילה • MultiMedia + MultiStay</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "העסק שלנו קיבל חיים חדשים הודות לMultiMarketing. האתר החדש שבנו עם WebMaster Pro 
+                        הכפיל את המכירות שלנו, והקמפיינים שערדית ניהלה הביאו לנו לקוחות איכותיים בדיוק כמו שרצינו. 
+                        זה שיווק דיגיטלי ברמה אחרת לגמרי!"
+                    </p>
+                    <div class="testimonial-author">רונית לוי</div>
+                    <div class="testimonial-role">בעלת עסק • MultiMarketing</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "הקהילות שערדית בנתה עבור העסק שלנו הן פשוט משהו אחר. תוך כמה חודשים הגענו 
+                        לאלפי חברים פעילים ואיכותיים שהפכו ללקוחות נאמנים. היא יודעת בדיוק איך לחבר 
+                        בין אנשים ולבנות קהילה אמיתית סביב המותג."
+                    </p>
+                    <div class="testimonial-author">מיכל ברק</div>
+                    <div class="testimonial-role">יזמת דיגיטלית • MultiCommunity</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>בואו נתחיל לעבוד יחד</h2>
+                <p>צרו קשר עוד היום ונבחר יחד את התחום או השירות המתאים בדיוק לצרכים שלכם</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>פרטי יצירת קשר</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>טלפון נייד</strong>
+                            <p>050-0000000</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>אימייל עסקי</strong>
+                            <p>erdit@multibrawn.co.il</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <strong>WhatsApp</strong>
+                            <p>050-0000000</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>כתובת</strong>
+                            <p>ישראל</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>שעות פעילות</strong>
+                            <p>א'-ה': 8:00-18:00<br>ו': 8:00-14:00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>שלחו הודעה</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">שם מלא *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">טלפון *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">אימייל *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="domain">איזה תחום מעניין אתכם?</label>
+                            <select id="domain" name="domain" required>
+                                <option value="">בחרו תחום</option>
+                                <option value="multistay">MultiStay - וילות וצימרים</option>
+                                <option value="multievents">MultiEvents - אירועים פרטיים</option>
+                                <option value="multimedia">MultiMedia - הפקת סרטונים</option>
+                                <option value="multicommunity">MultiCommunity - ניהול קהילות</option>
+                                <option value="multimarketing">MultiMarketing - שיווק דיגיטלי</option>
+                                <option value="general">ייעוץ כללי</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">פרטים נוספים</label>
+                            <textarea id="message" name="message" placeholder="ספרו לנו על הפרויקט או השירות שאתם מחפשים..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            שלחו הודעה
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/972500000000" class="whatsapp-float" target="_blank" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>תחומי העסק</h4>
+                    <a href="#" onclick="openDomain('multistay')">MultiStay - וילות וצימרים</a>
+                    <a href="#" onclick="openDomain('multievents')">MultiEvents - אירועים פרטיים</a>
+                    <a href="#" onclick="openDomain('multimedia')">MultiMedia - הפקות וידאו</a>
+                    <a href="#" onclick="openDomain('multicommunity')">MultiCommunity - ניהול קהילות</a>
+                    <a href="#" onclick="openDomain('multimarketing')">MultiMarketing - שיווק דיגיטלי</a>
+                </div>
+                <div class="footer-section">
+                    <h4>שירותים</h4>
+                    <a href="#">השכרת נופש יוקרתי</a>
+                    <a href="#">תכנון אירועים פרטיים</a>
+                    <a href="#">הפקת סרטונים מקצועית</a>
+                    <a href="#">ניהול קהילות דיגיטליות</a>
+                    <a href="#">בניית אתרים ושיווק</a>
+                </div>
+                <div class="footer-section">
+                    <h4>קשר</h4>
+                    <a href="tel:0500000000">050-0000000</a>
+                    <a href="mailto:erdit@multibrawn.co.il">erdit@multibrawn.co.il</a>
+                    <a href="https://wa.me/972500000000" target="_blank">WhatsApp</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 מולטיבראון בע"מ | כל הזכויות שמורות | בניהולה של ערדית בראון</p>
+            </div>
         </div>
     </footer>
 
@@ -601,69 +1529,220 @@
             });
         });
 
-        // Form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            const phone = formData.get('phone');
-            const treatmentType = formData.get('treatmentType');
-            const message = formData.get('message');
-            
-            // Create WhatsApp message
-            let whatsappMessage = `שלום ד״ר רוזן,%0A`;
-            whatsappMessage += `השם שלי הוא ${name}%0A`;
-            whatsappMessage += `הטלפון שלי: ${phone}%0A`;
-            
-            if (treatmentType) {
-                const treatmentNames = {
-                    'anxiety': 'טיפול בחרדות ופחדים',
-                    'depression': 'טיפול בדיכאון',
-                    'trauma': 'טיפול בטראומות',
-                    'couple': 'טיפול זוגי ומשפחתי',
-                    'change': 'טיפול בהתמודדות ושינוי',
-                    'children': 'טיפול בילדים ובני נוער'
-                };
-                whatsappMessage += `אני מעוניין/ת ב: ${treatmentNames[treatmentType]}%0A`;
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 4px 30px rgba(212, 175, 55, 0.2)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 4px 30px rgba(212, 175, 55, 0.1)';
             }
-            
-            if (message) {
-                whatsappMessage += `הודעה נוספת: ${message}%0A`;
-            }
-            
-            whatsappMessage += `%0Aאשמח לקבוע פגישת היכרות. תודה!`;
-            
-            // Open WhatsApp
-            window.open(`https://wa.me/972521234567?text=${whatsappMessage}`, '_blank');
-            
-            // Show success message
-            alert('תודה! ההודעה נשלחה ב-WhatsApp. נחזור אליך בהקדם.');
-            this.reset();
         });
 
-        // Add animation classes on scroll
+        // Stats counter animation
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 80;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                const suffix = element.textContent.replace(/[\d]/g, '');
+                element.textContent = Math.floor(current) + (suffix || '');
+            }, 25);
+        }
+
+        const statsObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumber = entry.target.querySelector('h3');
+                    const target = parseInt(statNumber.getAttribute('data-target'));
+                    if (target > 0) {
+                        animateCounter(statNumber, target);
+                    }
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        document.querySelectorAll('.stat-item').forEach(item => {
+            statsObserver.observe(item);
+        });
+
+        // Business cards entrance animation
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
 
-        const observer = new IntersectionObserver((entries) => {
+        const observer = new IntersectionObserver(function(entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.style.transform = 'translateY(0) scale(1)';
                 }
             });
         }, observerOptions);
 
-        // Observe elements for animation
-        document.querySelectorAll('.fade-in, .slide-in-right').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'all 0.8s ease';
-            observer.observe(el);
+        document.querySelectorAll('.business-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(50px) scale(0.95)';
+            card.style.transition = `opacity 0.6s ease ${index * 0.15}s, transform 0.6s ease ${index * 0.15}s`;
+            observer.observe(card);
         });
+
+        // Domain links function
+        function openDomain(domain) {
+            const domainUrls = {
+                'multistay': 'https://multistay.multibrawn.co.il',
+                'multievents': 'https://multievents.multibrawn.co.il',
+                'multimedia': 'https://multimedia.multibrawn.co.il',
+                'multicommunity': 'https://multicommunity.multibrawn.co.il',
+                'multimarketing': 'https://multimarketing.multibrawn.co.il'
+            };
+            
+            // For now, show alert since individual sites don't exist yet
+            alert(`🚀 בקרוב! ${domain.toUpperCase()} יהיה זמין בכתובת: ${domainUrls[domain] || 'בהכנה'}`);
+            
+            // When sites are ready, use this:
+            // window.open(domainUrls[domain], '_blank');
+        }
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Create WhatsApp message
+            const message = `🌟 בקשה חדשה ממולטיבראון:
+
+👤 שם: ${data.name}
+📞 טלפון: ${data.phone}
+📧 אימייל: ${data.email}
+🎯 תחום מעניין: ${data.domain}
+📝 פרטים נוספים: ${data.message || 'לא צוין'}
+
+נשמח לשמוע מכם ולעזור! 🚀`;
+            
+            const whatsappUrl = `https://wa.me/972500000000?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+            
+            alert('🎉 תודה רבה! ההודעה נשלחה בהצלחה. ערדית תחזור אליכם בהקדם!');
+            this.reset();
+        });
+
+        // Testimonials animation
+        document.querySelectorAll('.testimonial-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = `opacity 0.6s ease ${index * 0.2}s, transform 0.6s ease ${index * 0.2}s`;
+            
+            const testimonialsObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            testimonialsObserver.observe(card);
+        });
+
+        // Luxury particles effect
+        function createLuxuryParticle() {
+            const particles = ['✨', '💎', '🌟', '⭐', '💫'];
+            const particle = particles[Math.floor(Math.random() * particles.length)];
+            
+            const element = document.createElement('div');
+            element.textContent = particle;
+            element.style.position = 'fixed';
+            element.style.left = Math.random() * 100 + '%';
+            element.style.top = '100%';
+            element.style.fontSize = Math.random() * 15 + 20 + 'px';
+            element.style.pointerEvents = 'none';
+            element.style.transition = 'all 15s linear';
+            element.style.zIndex = '1';
+            element.style.opacity = '0.7';
+            
+            document.body.appendChild(element);
+            
+            setTimeout(() => {
+                element.style.top = '-100px';
+                element.style.transform = 'translateX(' + (Math.random() * 200 - 100) + 'px) rotate(360deg)';
+                element.style.opacity = '0';
+            }, 100);
+            
+            setTimeout(() => {
+                element.remove();
+            }, 15000);
+        }
+
+        // Create luxury particles periodically
+        setInterval(createLuxuryParticle, 3000);
+
+        // Add mobile menu toggle
+        const nav = document.querySelector('.nav');
+        const navLinks = document.querySelector('.nav-links');
+        
+        // Create mobile menu button
+        const mobileMenuBtn = document.createElement('button');
+        mobileMenuBtn.className = 'mobile-menu-btn';
+        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        mobileMenuBtn.style.cssText = `
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            cursor: pointer;
+        `;
+        
+        nav.appendChild(mobileMenuBtn);
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Enhanced responsive styles
+        const style = document.createElement('style');
+        style.textContent = `
+            @media (max-width: 768px) {
+                .mobile-menu-btn {
+                    display: block !important;
+                }
+                
+                .nav-links {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 100%;
+                    background: white;
+                    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+                    flex-direction: column;
+                    padding: 2rem 0;
+                    transform: translateY(-100%);
+                    opacity: 0;
+                    transition: all 0.3s ease;
+                }
+                
+                .nav-links.active {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+                
+                .nav-links li {
+                    margin: 0.5rem 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 </body>
 </html>
